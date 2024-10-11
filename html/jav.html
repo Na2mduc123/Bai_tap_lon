@@ -1,0 +1,63 @@
+<head></head>
+<script>
+    console.log("thih ngu lon") //Chỉ hiển thị trong trang console 
+    var tuoi = 21
+    var ten = "Tú Nam" // Khởi tạo biến tên ban đầu
+    var docthan = true
+    // ten = window.prompt("Nhập tên của người bạn nhớ nhung: ") // Hiển thị một hộp thoại mà bạn có thể nhập vào được, sau đó nó sẽ ghi đè lên biến tên ban đầu
+    ten = "Tôi yêu " + ten
+    // tuoi = parseInt(window.prompt("Nhập tuổi: "))
+    
+    /* if(tuoi >= 18)
+    {
+        document.write("Được thịt! ")
+    }
+    else
+    {
+        document.write("Đi tòo!")
+    }
+     */
+    
+        // document.write(ten) // Hiển thị ra trang web
+    // document.write(tuoi < 25)
+
+    /*
+    for(var i = 0; i < 10 ; i++)
+    {   
+        document.write("Năm nay em ",tuoi + i, " tuổi.<br>")
+    }
+    */
+
+    // Kiểu Object
+    var gia_dinh = {
+        ten_bo: "Chủ",
+        tuoi: 46,
+        hon_nhan: true,
+        dia_chi: {
+            tinh: "Điện Biên",
+            huyen: "Tủa Chùa",
+            xa: "TT. Tủa Chùa"
+        }
+    }
+    document.write("Họ và tên bố: " + gia_dinh.ten_bo + "<br>")
+    
+    // Kiểu function
+    var tinh_tuoi = function()
+    {
+        var nam_sinh = parseInt(window.prompt("Nhập vào năm sinh: "))
+        tuoi = 2024 - nam_sinh
+        document.write("Tuổi: "+ tuoi)
+    }
+    tinh_tuoi()
+
+    // Kiểu Array
+    var a = ["Nam", "Mai", "Thịnh", "Hạ"]
+    // document.write(a[1]) 
+    // a.push("Nguyên") // Hàm thêm dữ liệu vào mảng
+    a.pop() // Xóa dữ liệu trong mảng
+    a[0] = "Nam yêu Mai" // Sửa dữ liệu trong mảng
+    document.write(a) // In ra mảng
+    document.write(a.length) // In ra độ dài của mảng
+    
+    
+</script>

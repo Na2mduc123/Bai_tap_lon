@@ -1,0 +1,42 @@
+<head></head>
+Nhập tên: <br>
+<input type="text" id="input">
+<br>
+<button onclick="nhap_vao()">OK</button>
+<div id = "loi_chao"></div>
+<script>
+
+    /* Lệnh document.write ghi đè lên tất cả các element trước đó
+    var nhap_vao = function()
+    {
+        var ten = document.getElementById("input").value // Lấy ra giá trị, lưu giá trị ta nhập vào ô
+        var loi_chao = "Xin chào " + ten
+        document.write(loi_chao)
+    }
+    */
+
+    // Lệnh innerHTML sẽ giữ nguyên các element ban đầu và lời chào in ra sẽ nằm trong cặp thẻ div
+    var nhap_vao = function()
+    {
+        var ten = document.getElementById("input").value // Lấy ra giá trị, lưu giá trị ta nhập vào ô
+        var loi_chao = "Người mà bạn thích nhất là " + ten + " ư?"
+        document.getElementById("loi_chao").innerHTML = loi_chao
+    }
+
+    var thong_bao = function()
+    {
+        document.getElementById("loi_chao").innerHTML = "Hết giờ! <br>" 
+        document.getElementById("loi_chao").innerHTML += "Vui lòng điền câu trả lời!" // ghi thêm dữ liệu
+    }
+    setTimeout(thong_bao, 3000) // Cơ chế bất đồng bộ, hẹn giờ cho element chạy
+    document.getElementById("loi_chao").innerHTML = "Xin chào, bạn có 3s để nghĩ về người mà bạn thích nhất! "
+
+    localStorage.ten = "Vũ Tú Nam" // Cơ chế lưu trữ data
+    localStorage.gioitinh = "Nam"
+    localStorage.ngaysinh = "18/08/2003"
+    localStorage.diachi = "Hà Nam"
+    localStorage.sodienthoai = "0345281795"
+    localStorage.masinhvien = "2101020"
+    localStorage.hocvan = "Đại học"
+    
+</script>
